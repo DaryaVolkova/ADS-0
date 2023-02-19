@@ -1,14 +1,10 @@
 // Copyright 2021 NNTU-CS
 
 int gcd(int a, int b) {
-    if (a < 0) a = 0 - a;
-    if (b < 0) b = 0 - b;
-    if ((a != 0) && (b != 0)) {
-        while (a != b) {
-            if (a > b) a = a - b;
-            else b = b - a;
-        }
-        return a;
+    int n;
+    int max = a > b ? a : b;
+    for (int i = 1; i <= max; i++){
+        if ((a % i == 0) && (b % i == 0)) n = i;
     }
-    else return (a + b);
+    return nod;
 }
